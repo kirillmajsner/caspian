@@ -1,0 +1,122 @@
+
+.editor-block {
+  margin-top: 134px;
+  margin-bottom: 90px;
+  .button {
+    margin-left: 17px;
+    text-align: center;
+  }
+  .title {
+    margin-bottom: 32px;
+    margin-left: 0;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -25px;
+      background: url("../images/arrow.svg") center no-repeat;
+      height: 7px;
+      width: 25px;
+      display: inline-block;
+    }
+  }
+  .editor-info {
+    p {
+      font-family: 'Circe-Regular';
+      font-size: 18px;
+      line-height: 25px;
+      margin-top: 0;
+      margin-bottom: 32px;
+    }
+  }
+  .editor-image {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    margin-left: -25px;
+    margin-right: -25px;
+
+  }
+  .editor-list {
+    padding-left: 0;
+    margin-left: 20px;
+    .list-item {
+      list-style: none;
+      font-family: 'Circe-Regular';
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 27px;
+      margin-top: 30px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        background: $color-red;
+        left: -21px;
+        top: 10px;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .editor-block {
+    margin-bottom: 104px;
+    margin-top: 0;
+    position: relative;
+    .button {
+      margin-left: 0;
+      margin-top: 5px;
+    }
+    .title {
+      margin-left: 93px;
+      margin-bottom: 40px;
+      &::before{
+        display: none;
+      }
+    }
+    .editor-image {
+      right: 4px;
+      top: 109px;
+      position: absolute;
+      width: 50%;
+      margin: auto;
+    }
+    .editor-info {
+      p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 0;
+        margin-bottom: 17px;
+      }
+    }
+    .editor-list {
+      margin-left: 26px;
+      margin-top: 29px;
+      .list-item {
+        position: relative;
+        font-size: 20px;
+        padding-right: 30px;
+        margin-bottom: 31px;
+        line-height: 30px;
+        &::before {
+          position: absolute;
+          content: "";
+          display: block;
+          height: 4px;
+          width: 4px;
+          border-radius: 50%;
+          background: $color-red;
+          left: -27px;
+          top: 10px;
+        }
+      }
+    }
+  }
+}

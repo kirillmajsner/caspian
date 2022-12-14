@@ -1,0 +1,74 @@
+.img-block {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-family: "YesevaOne";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  margin-left: 0;
+  line-height: 35px;
+  margin-top: 0;
+}
+
+.description {
+  font-family: "Circe-Regular";
+  color: $color-white;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.post-category {
+  text-decoration: none;
+  font-family: "Rubik-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  border: 1px solid #989fab;
+  color: #f3f5f7;
+  padding: 9px 15px 9px 15px;
+  transition: 300ms;
+}
+.post-datetime {
+  font-family: "Rubik-Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #f3f5f7;
+}
+
+
+@include desktop {
+  .title {
+    font-size: 60px;
+    line-height: 70px;
+    margin-left: 92px;
+    margin-top: 0;
+  }
+  .post-category {
+    color: #232831;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      background: #989fab;
+    }
+  }
+  .post-datetime {
+    color: #989fab;
+  }
+  .description {
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-darkgray;
+  }
+  .button {
+    &:hover {
+      background: #b40927;
+    }
+  }
+}

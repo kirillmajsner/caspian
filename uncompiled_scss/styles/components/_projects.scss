@@ -1,0 +1,183 @@
+.header {
+  &.project-header {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .header-body {
+    &.project-header {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.projects-pic {
+  position: relative;
+  margin: 117px 0;
+  .img-block {
+    min-height: 280px;
+  }
+  .project-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0;
+  }
+  .projects-info {
+    margin-left: 0;
+    padding-right: 0;
+    margin-top: 30px;
+
+    color: #FFFFFF;
+    .title {
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+    }
+    .description {
+      letter-spacing: 0;
+      color: $color-white;
+      padding: 0 15% 0 25px;
+    }
+  }
+}
+
+.project-carts {
+  text-align: center;
+  margin-bottom: 70px;
+  .title {
+    font-size: 17px;
+    line-height: 25px;
+    margin-top: 86px;
+    letter-spacing: 0;
+    margin-left: 0;
+    margin-bottom: 100px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      bottom: -34px;
+      width: 200px;
+      margin: auto;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: $color-red;
+    }
+  }
+  .carts-block {
+    .cart {
+      margin-left: -25px;
+      margin-right: -25px;
+      margin-bottom: 30px;
+      position: relative;
+      .cart-link {
+        font-family: 'YesevaOne';
+        font-style: normal;
+        font-weight: normal;
+        text-transform: uppercase;
+        background: #fff;
+        font-size: 17px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        padding: 0 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-decoration: none;
+        min-height: 92px;
+        color: $color-darkgray;
+        opacity: 0.8;
+        transition: 300ms;
+      }
+    }
+  }
+}
+
+@include tablet {
+
+  .project-carts {
+    .carts-block {
+      .cart {
+        margin-right: 0;
+        margin-left: 0;
+
+        .cart-link {
+          padding: 0 90px;
+        }
+      }
+    }
+  }
+
+  .projects-pic {
+    .project-body {
+      padding-bottom: 45px;
+    }
+    .projects-info {
+      padding-right: 25%;
+    }
+  }
+}
+
+@include desktop {
+  .projects-pic {
+    margin: 0 0 30px 0;
+    .img-block {
+      min-height: 500px;
+      box-shadow: 0 5px 10px 0 #cccc;
+    }
+    .projects-info {
+      text-align: left;
+      color: #FFFFFF;
+      padding-right: 13%;
+      .title {
+        font-size: 56px;
+        line-height: 55px;
+        margin-left: 0;
+        letter-spacing: -1px;
+      }
+      .description {
+        font-size: 22px;
+        letter-spacing: 0;
+        padding: 0 52% 0 0;
+      }
+    }
+
+    .project-body {
+      padding-bottom: 85px;
+    }
+  }
+  .project-carts {
+    margin-bottom: 150px;
+    .title {
+      font-size: 25px;
+      line-height: 35px;
+      letter-spacing: 0.5px;
+      padding: 0 17%;
+    }
+    .carts-block {
+      .cart {
+
+        box-shadow: 1px 5px 10px 1px #cccc;
+        .cart-link {
+          padding: 0 90px;
+          &:hover {
+            min-height: 105px;
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+
+}

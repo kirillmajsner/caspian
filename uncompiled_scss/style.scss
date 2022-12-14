@@ -1,0 +1,53 @@
+@import "grid/main";
+@import "slick/main";
+@import "styles/support/normalize";
+@import "styles/support/variables";
+@import "styles/support/fonts";
+@import "styles/support/mixins";
+@import "styles/support/grid";
+@import "styles/support/common";
+@import "styles/support/slider";
+@import "styles/support/buttons";
+@import "styles/components/header";
+@import "styles/components/footer";
+@import "styles/components/open_jobs";
+@import "styles/components/contacts";
+@import "styles/components/projects";
+@import "styles/components/about_us";
+@import "styles/components/main_page";
+@import "styles/components/jobs";
+@import "styles/components/blog_page";
+@import "styles/components/open-projects";
+
+html {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: #232831;
+  color: $color-white;
+  font-size: 15px;
+  font-size: 13px;
+  &.bg-image {
+    background: #232831 url("../images/sm-bg.png") right 10% no-repeat;
+  }
+}
+
+@include tablet {
+  body {
+  }
+}
+
+@include desktop {
+  body {
+    background: $color-white;
+    color: $color-black;
+    font-size: 13px;
+    &.bg-image {
+      background: url("../images/bitmap-background.png") right 15% no-repeat;
+    }
+  }
+}
